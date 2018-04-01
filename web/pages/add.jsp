@@ -30,8 +30,7 @@
             <td><input type="text" name="standard"/></td>
         </tr>
         <input type="submit" value="Добавить">
-        <input type="submit" value="Обновить">
-        <input type="submit" value="Удалить">
+        <input type="hidden" name="command" value="ADDED">
     </table>
 </form>
 </body>

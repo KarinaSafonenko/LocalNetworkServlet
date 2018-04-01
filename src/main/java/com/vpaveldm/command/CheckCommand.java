@@ -8,12 +8,13 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.vpaveldm.servlet.ServletUrils.PASSWORD;
+import static com.vpaveldm.servlet.ServletUrils.URL;
+import static com.vpaveldm.servlet.ServletUrils.USER;
+
 public class CheckCommand implements ICommand {
 
     private static final String LOCAL_NETWORK_SET = "localNetworkSet";
-    private static final String URL = "jdbc:mysql://localhost:3306/localnetworkdb";
-    private static final String USER = "root";
-    private static final String PASSWORD = "root";
 
     public CheckCommand() {
         try {
@@ -49,5 +50,10 @@ public class CheckCommand implements ICommand {
         }
         request.setAttribute(LOCAL_NETWORK_SET, networks);
         return "/pages/check.jsp";
+    }
+
+    @Override
+    public void handle(HttpServletRequest request) {
+        throw new UnsupportedOperationException();
     }
 }

@@ -20,10 +20,21 @@ public class Controller extends HttpServlet {
         handleRequest(req, resp);
     }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        handleRequest(req, resp);
+    }
+
     private void handleRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter(COMMAND);
-        ICommand command = new CommandFactory().defineCommand(action);
-        String page = command.execute(req);
-        req.getRequestDispatcher(page).forward(req, resp);
+        CommandFactory commandFactory = new CommandFactory();
+        ICommand command = commandFactory.defineCommand(action);
+        if (commandFactory.isHandleCommand(action)) {
+            command.handle(req);
+            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+        } else {
+            String page = command.execute(req);
+            req.getRequestDispatcher(page).forward(req, resp);
+        }
     }
 }
