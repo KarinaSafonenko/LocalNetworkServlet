@@ -2,6 +2,7 @@ package com.vpaveldm.command;
 
 import com.mysql.fabric.jdbc.FabricMySQLDriver;
 import com.vpaveldm.entity.LocalNetwork;
+import com.vpaveldm.entity.Standard;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.*;
@@ -40,7 +41,9 @@ public class CheckCommand implements ICommand {
                 String name = resultSet.getString("name");
                 Integer speed = resultSet.getInt("speed");
                 String cable = resultSet.getString("cable");
-                String standard = resultSet.getString("standard");
+                String standardName = resultSet.getString("standard_name");
+                String standardLand = resultSet.getString("standard_land");
+                Standard standard = new Standard(standardName, standardLand);
                 Integer id = resultSet.getInt("id");
                 LocalNetwork network = new LocalNetwork(id, name, cable, speed, standard);
                 networks.add(network);

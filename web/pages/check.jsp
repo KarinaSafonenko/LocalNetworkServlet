@@ -8,10 +8,12 @@
 <body>
 <table border="1" cellpadding="5" cellspacing="1">
     <tr>
+        <th>Id</th>
         <th>Name</th>
         <th>Speed</th>
         <th>Cable</th>
-        <th>Standard</th>
+        <th>StandardName</th>
+        <th>StandardLand</th>
     </tr>
     <c:forEach items="${localNetworkSet}" var="localNetwork">
         <tr>
@@ -19,7 +21,8 @@
             <td>${localNetwork.name}</td>
             <td>${localNetwork.speed}</td>
             <td>${localNetwork.cable}</td>
-            <td>${localNetwork.standard}</td>
+            <td>${localNetwork.standard.name}</td>
+            <td>${localNetwork.standard.land}</td>
         </tr>
     </c:forEach>
 </table>

@@ -1,6 +1,7 @@
 package com.vpaveldm.command;
 
 import com.mysql.fabric.jdbc.FabricMySQLDriver;
+import com.vpaveldm.entity.Standard;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.*;
@@ -34,19 +35,33 @@ public class UpdateCommand implements ICommand {
         }
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
              Statement statement = connection.createStatement()) {
-            Integer id = Integer.valueOf(request.getParameter("id"));
+            String idParameter = request.getParameter("id");
+            if (idParameter.equals(""))
+                return;
+            Integer id = Integer.valueOf(idParameter);
             String name = request.getParameter("name");
-            Integer speed = Integer.valueOf(request.getParameter("speed"));
+            String speed = request.getParameter("speed");
             String cable = request.getParameter("cable");
-            String standard = request.getParameter("standard");
+            String standardName = request.getParameter("standard_name");
+            String standardLand = request.getParameter("standard_land");
+            String fields = "";
+            fields = add(fields, String.valueOf(id), "id");
+            fields = add(fields, name, "name");
+            fields = add(fields, speed, "speed");
+            fields = add(fields, cable, "cable");
+            fields = add(fields, standardName, "standard_name");
+            fields = add(fields, standardLand, "standard_land");
+            fields = fields.substring(0, fields.length() - 2) + " ";
             statement.executeUpdate("UPDATE localnetwork SET " +
-                    "name='" + name + "', " +
-                    "speed='" + speed + "', " +
-                    "cable='" + cable + "', " +
-                    "standard='" + standard + "' " +
-                    "WHERE id = " + id + ";");
+                    fields + "WHERE id = " + id + ";");
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private String add(String fields, String field, String fieldName) {
+        if (!field.equals(""))
+            fields = fields + fieldName + "='" + field + "', ";
+        return fields;
     }
 }

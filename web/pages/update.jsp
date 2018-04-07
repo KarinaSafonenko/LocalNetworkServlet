@@ -30,8 +30,12 @@
             <td><input type="text" name="cable"/></td>
         </tr>
         <tr>
-            <td>Стандарт:</td>
-            <td><input type="text" name="standard"/></td>
+            <td>Название стандарта:</td>
+            <td><input type="text" name="standard_name"/></td>
+        </tr>
+        <tr>
+            <td>Страна стандарта:</td>
+            <td><input type="text" name="standard_land"/></td>
         </tr>
         <input type="submit" value="Обновить">
         <input type="hidden" name="command" value="UPDATED">

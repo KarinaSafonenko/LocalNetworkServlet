@@ -25,7 +25,9 @@ public class DeleteCommand implements ICommand {
         }
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
              Statement statement = connection.createStatement()) {
-            Integer id = Integer.valueOf(request.getParameter("id"));
+            String id = request.getParameter("id");
+            if (id.equals(""))
+                return;
             statement.executeUpdate("DELETE FROM localnetwork WHERE id = " + id + ";");
         } catch (SQLException e) {
             e.printStackTrace();

@@ -4,13 +4,13 @@ public class LocalNetwork {
     private String name;
     private String cable;
     private int speed;
-    private String standard;
+    private Standard standard;
     private int id;
 
     public LocalNetwork() {
     }
 
-    public LocalNetwork(int id, String name, String cable, int speed, String standard) {
+    public LocalNetwork(int id, String name, String cable, int speed, Standard standard) {
         this.name = name;
         this.cable = cable;
         this.speed = speed;
@@ -42,11 +42,11 @@ public class LocalNetwork {
         this.speed = speed;
     }
 
-    public String getStandard() {
+    public Standard getStandard() {
         return standard;
     }
 
-    public void setStandard(String standard) {
+    public void setStandard(Standard standard) {
         this.standard = standard;
     }
 

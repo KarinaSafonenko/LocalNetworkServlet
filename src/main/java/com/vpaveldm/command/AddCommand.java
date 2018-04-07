@@ -1,6 +1,7 @@
 package com.vpaveldm.command;
 
 import com.mysql.fabric.jdbc.FabricMySQLDriver;
+import com.vpaveldm.entity.Standard;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.*;
@@ -35,11 +36,22 @@ public class AddCommand implements ICommand {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
              Statement statement = connection.createStatement()) {
             String name = request.getParameter("name");
-            Integer speed = Integer.valueOf(request.getParameter("speed"));
+            if (name.equals(""))
+                return;
+            String speed = request.getParameter("speed");
+            if (speed.equals(""))
+                return;
             String cable = request.getParameter("cable");
-            String standard = request.getParameter("standard");
-            statement.execute("INSERT INTO localnetwork (name, speed, cable, standard) VALUES ('"
-                    + name + "', '" + speed + "', '" + cable + "', '" + standard + "');");
+            if (cable.equals(""))
+                return;
+            String standardName = request.getParameter("standard_name");
+            if (standardName.equals(""))
+                return;
+            String standardLand = request.getParameter("standard_land");
+            if (standardLand.equals(""))
+                return;
+            statement.execute("INSERT INTO localnetwork (name, speed, cable, standard_name, standard_land) VALUES ('"
+                    + name + "', '" + speed + "', '" + cable + "', '" + standardName + "', '" + standardLand + "');");
         } catch (SQLException e) {
             e.printStackTrace();
         }
