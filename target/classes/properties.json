@@ -1,0 +1,13 @@
+{
+  "web": {
+    "client_id": "1085519973047-7ets3fu25ek3jojktl70m9obdqbq5sid.apps.googleusercontent.com",
+    "project_id": "localproject-201018",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://accounts.google.com/o/oauth2/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "F2oCie3Iumn3CMC_R5GHf2kP",
+    "redirect_uris": [
+      "http://localhost:8080/ControllerServlet?command=GOOGLE_FINISHED"
+    ]
+  }
+}

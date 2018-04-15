@@ -1,0 +1,89 @@
+GET https://accounts.google.com/o/oauth2/auth?scope=https://www.google.com/m8/feeds&include_granted_scopes=true&redirect_uri=http://localhost:8080/ControllerServlet?command=CHECK&response_type=code&client_id=1085519973047-7ets3fu25ek3jojktl70m9obdqbq5sid.apps.googleusercontent.com&access_type=offline
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+
+<> 2018-04-13T114353.200.html
+
+###
+
+GET https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.google.com/m8/feeds&include_granted_scopes=true&redirect_uri=http://localhost:8080/ControllerServlet?command=CHECK&response_type=code&client_id=1085519973047-7ets3fu25ek3jojktl70m9obdqbq5sid.apps.googleusercontent.com&access_type=offline
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+
+<> 2018-04-13T112706.200.html
+
+###
+
+GET https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.google.com/m8/feeds&include_granted_scopes=true&redirect_uri=http://localhost:8080/ControllerServlet?command=CHECK&response_type=code&client_id=1085519973047-7ets3fu25ek3jojktl70m9obdqbq5sid.apps.googleusercontent.com&access_type=offline
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+
+<> 2018-04-13T100649.200.html
+
+###
+
+GET https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.google.com/m8/feeds&access_type=offline&include_granted_scopes=true&redirect_uri=http://localhost:8080/ControllerServlet?command=CHECK&response_type=code&client_id=1085519973047-7ets3fu25ek3jojktl70m9obdqbq5sid.apps.googleusercontent.com
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+
+<> 2018-04-13T100550.400.html
+
+###
+
+GET https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.google.com/m8/feeds&access_type=offline&include_granted_scopes=true&redirect_uri=http://localhost:8080/ControllerServlet?command=CHECK&response_type=code&client_id=1085519973047-7ets3fu25ek3jojktl70m9obdqbq5sid.apps.googleusercontent.com
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+
+<> 2018-04-13T100415.400.html
+
+###
+
+GET https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.google.com/m8/feeds&access_type=offline&include_granted_scopes=true&redirect_uri=http://localhost:8080/google/oauth&response_type=code&client_id=1085519973047-7ets3fu25ek3jojktl70m9obdqbq5sid.apps.googleusercontent.com
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+
+<> 2018-04-13T100149.400.html
+
+###
+
+GET https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.google.com/m8/feeds&access_type=offline&include_granted_scopes=true&redirect_uri=https://www.googleapis.com/oauth2/v1/certs&response_type=code&client_id=1085519973047-7ets3fu25ek3jojktl70m9obdqbq5sid.apps.googleusercontent.com
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+
+<> 2018-04-13T095132.400.html
+
+###
+
+GET https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.google.com/m8/feeds&access_type=offline&include_granted_scopes=true&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&client_id=1085519973047-7ets3fu25ek3jojktl70m9obdqbq5sid.apps.googleusercontent.com
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+
+<> 2018-04-13T095000.400.html
+
+###
+
+GET https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.google.com/m8/feeds&access_type=offline&include_granted_scopes=true&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&client_id=355711686384-bdb3rrpnc818npeilgb0243gus8rr3pm.apps.googleusercontent.com
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+
+<> 2018-04-13T094110.400.html
+
+###
+
+GET https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.google.com/m8/feeds&access_type=offline&include_granted_scopes=true&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&client_id=355711686384-bdb3rrpnc818npeilgb0243gus8rr3pm.apps.googleusercontent.com
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-04-13T093813.400.html
+
+###
+

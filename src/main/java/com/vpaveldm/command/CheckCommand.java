@@ -5,6 +5,7 @@ import com.vpaveldm.entity.LocalNetwork;
 import com.vpaveldm.entity.Standard;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +28,7 @@ public class CheckCommand implements ICommand {
     }
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request, HttpServletResponse response) {
         List<LocalNetwork> networks = new ArrayList<>();
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -58,5 +59,10 @@ public class CheckCommand implements ICommand {
     @Override
     public void handle(HttpServletRequest request) {
         throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public NextOperation getNextOperation() {
+        return NextOperation.FORWARD;
     }
 }

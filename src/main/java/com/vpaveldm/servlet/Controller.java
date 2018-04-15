@@ -31,10 +31,19 @@ public class Controller extends HttpServlet {
         ICommand command = commandFactory.defineCommand(action);
         if (commandFactory.isHandleCommand(action)) {
             command.handle(req);
-            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+            req.getRequestDispatcher("pages/workspace.jsp").forward(req, resp);
         } else {
-            String page = command.execute(req);
-            req.getRequestDispatcher(page).forward(req, resp);
+            String page = command.execute(req, resp);
+            switch (command.getNextOperation()) {
+                case FORWARD: {
+                    req.getRequestDispatcher(page).forward(req, resp);
+                    break;
+                }
+                case REDIRECT: {
+                    resp.sendRedirect(page);
+                    break;
+                }
+            }
         }
     }
 }

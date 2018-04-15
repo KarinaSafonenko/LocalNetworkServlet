@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: User
@@ -14,21 +15,13 @@
 <form>
     Локальные сети предстали перед Вами!
 </form>
-<form action="/ControllerServlet" method="get">
-    <input type="hidden" name="command" value="ADD">
-    <input type="submit" value="Добавить">
+<form action="<c:url value="/ControllerServlet"/>" method="get">
+    <input type="hidden" name="command" value="GOOGLE">
+    <input type="submit" value="Зайти через google">
 </form>
-<form action="/ControllerServlet" method="get">
-    <input type="hidden" name="command" value="UPDATE">
-    <input type="submit" value="Обновить">
-</form>
-<form action="/ControllerServlet" method="get">
-    <input type="hidden" name="command" value="DELETE">
-    <input type="submit" value="Удалить">
-</form>
-<form action="/ControllerServlet" method="get">
-    <input type="hidden" name="command" value="CHECK">
-    <input type="submit" value="Просмотреть">
+<form action="<c:url value="/ControllerServlet"/>" method="get">
+    <input type="hidden" name="command" value="VK">
+    <input type="submit" value="Зайти через vk">
 </form>
 </body>
 </html>

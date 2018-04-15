@@ -1,14 +1,12 @@
 package com.vpaveldm.command;
 
 import com.mysql.fabric.jdbc.FabricMySQLDriver;
-import com.vpaveldm.entity.Standard;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
 
-import static com.vpaveldm.servlet.ServletUrils.PASSWORD;
-import static com.vpaveldm.servlet.ServletUrils.URL;
-import static com.vpaveldm.servlet.ServletUrils.USER;
+import static com.vpaveldm.servlet.ServletUrils.*;
 
 public class AddCommand implements ICommand {
     public AddCommand() {
@@ -22,7 +20,7 @@ public class AddCommand implements ICommand {
 
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request, HttpServletResponse response) {
         return "/pages/add.jsp";
     }
 
@@ -55,5 +53,10 @@ public class AddCommand implements ICommand {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public NextOperation getNextOperation() {
+        return NextOperation.FORWARD;
     }
 }

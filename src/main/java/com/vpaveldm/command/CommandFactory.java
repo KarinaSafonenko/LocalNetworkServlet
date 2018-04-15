@@ -10,9 +10,12 @@ public class CommandFactory {
     private static final String DELETED = "DELETED";
     private static final String UPDATED = "UPDATED";
     private static final String CHECKED = "CHECKED";
+    private static final String GOOGLE = "GOOGLE";
+    private static final String GOOGLE_FINISHED = "GOOGLE_FINISHED";
 
     public boolean isHandleCommand(String command) {
         switch (command) {
+            case GOOGLE_FINISHED:
             case DELETED:
             case CHECKED:
             case UPDATED:
@@ -41,6 +44,10 @@ public class CommandFactory {
             case DELETED:
             case DELETE: {
                 return new DeleteCommand();
+            }
+            case GOOGLE:
+            case GOOGLE_FINISHED: {
+                return new GoogleImplCommand();
             }
             default:
                 throw new UnsupportedOperationException("the command " + command + " isn't supported");

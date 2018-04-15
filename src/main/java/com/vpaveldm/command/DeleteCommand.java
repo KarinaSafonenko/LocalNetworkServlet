@@ -1,6 +1,7 @@
 package com.vpaveldm.command;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -12,7 +13,7 @@ import static com.vpaveldm.servlet.ServletUrils.USER;
 
 public class DeleteCommand implements ICommand {
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request, HttpServletResponse response) {
         return "/pages/delete.jsp";
     }
 
@@ -32,5 +33,10 @@ public class DeleteCommand implements ICommand {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public NextOperation getNextOperation() {
+        return NextOperation.FORWARD;
     }
 }

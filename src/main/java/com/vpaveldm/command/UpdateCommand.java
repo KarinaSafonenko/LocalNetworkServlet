@@ -1,14 +1,12 @@
 package com.vpaveldm.command;
 
 import com.mysql.fabric.jdbc.FabricMySQLDriver;
-import com.vpaveldm.entity.Standard;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
 
-import static com.vpaveldm.servlet.ServletUrils.PASSWORD;
-import static com.vpaveldm.servlet.ServletUrils.URL;
-import static com.vpaveldm.servlet.ServletUrils.USER;
+import static com.vpaveldm.servlet.ServletUrils.*;
 
 public class UpdateCommand implements ICommand {
     public UpdateCommand() {
@@ -22,7 +20,7 @@ public class UpdateCommand implements ICommand {
 
     @Override
 
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request, HttpServletResponse response) {
         return "/pages/update.jsp";
     }
 
@@ -57,6 +55,11 @@ public class UpdateCommand implements ICommand {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public NextOperation getNextOperation() {
+        return NextOperation.FORWARD;
     }
 
     private String add(String fields, String field, String fieldName) {

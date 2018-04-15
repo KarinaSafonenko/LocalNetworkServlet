@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 01.04.2018
-  Time: 19:19
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -30,8 +23,12 @@
             <td><input type="text" name="cable"/></td>
         </tr>
         <tr>
-            <td>Стандарт:</td>
-            <td><input type="text" name="standard"/></td>
+            <td>Название стандарта:</td>
+            <td><input type="text" name="standard_name"/></td>
+        </tr>
+        <tr>
+            <td>Страна стандарта:</td>
+            <td><input type="text" name="standard_land"/></td>
         </tr>
         <input type="submit" value="Обновить">
         <input type="hidden" name="command" value="UPDATED">
