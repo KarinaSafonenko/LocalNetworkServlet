@@ -12,10 +12,13 @@ public class CommandFactory {
     private static final String CHECKED = "CHECKED";
     private static final String GOOGLE = "GOOGLE";
     private static final String GOOGLE_FINISHED = "GOOGLE_FINISHED";
+    private static final String VK = "VK";
+    private static final String VK_FINISHED = "VK_FINISHED";
 
     public boolean isHandleCommand(String command) {
         switch (command) {
             case GOOGLE_FINISHED:
+            case VK_FINISHED:
             case DELETED:
             case CHECKED:
             case UPDATED:
@@ -29,6 +32,10 @@ public class CommandFactory {
 
     public ICommand defineCommand(String command) {
         switch (command) {
+            case VK_FINISHED:
+            case VK: {
+                return new VKCommand();
+            }
             case CHECKED:
             case CHECK: {
                 return new CheckCommand();

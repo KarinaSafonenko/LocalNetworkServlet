@@ -6,13 +6,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/ControllerServlet")
-public class Controller extends Servlet {
-    private static final String COMMAND = "command";
-
+@WebServlet("/VkServlet")
+public class VkServlet extends Servlet {
     @Override
     protected void handleRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        action = req.getParameter(COMMAND);
+        action = "VK_FINISHED";
         super.handleRequest(req, resp);
     }
 }

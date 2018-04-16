@@ -12,6 +12,7 @@
     <title>Title</title>
 </head>
 <body>
+Приветствую, ${name}
 <input type="hidden" name="command" value="GOOGLE_FINISHED">
 <form action="<c:url value="/ControllerServlet"/>" method="get">
     <input type="hidden" name="command" value="ADD">

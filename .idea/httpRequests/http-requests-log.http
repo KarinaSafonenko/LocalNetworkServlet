@@ -1,3 +1,10 @@
+GET /www.googleapis.com?scope=https://www.google.com/m8/feeds&include_granted_scopes=true&redirect_uri=http://localhost:8080/ControllerServlet?command=CHECK&response_type=code&client_id=1085519973047-7ets3fu25ek3jojktl70m9obdqbq5sid.apps.googleusercontent.com&access_type=offline
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+
+###
+
 GET https://accounts.google.com/o/oauth2/auth?scope=https://www.google.com/m8/feeds&include_granted_scopes=true&redirect_uri=http://localhost:8080/ControllerServlet?command=CHECK&response_type=code&client_id=1085519973047-7ets3fu25ek3jojktl70m9obdqbq5sid.apps.googleusercontent.com&access_type=offline
 Content-Type: text/html; charset=utf-8
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
